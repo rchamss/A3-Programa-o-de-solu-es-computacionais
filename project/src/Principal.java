@@ -1,27 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
-    static void main(String[] args){
+    public static void main(String[] args){
+        boolean executandoPrograma = true;
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            Operacoes.mostrarMenu();
-            int escolha = scanner.nextInt();
+        List<Colaborador> colaboradores = new ArrayList<Colaborador>();
 
-            if (escolha == 0){
-                break;
-            }
+        while (executandoPrograma) {
+            Operacao.limparTerminal();
+            Menus.mostrarMenuPrincipal();
+            int escolha = Cadastros.lerInt(scanner, "");
             switch (escolha){
-                case 1 -> System.out.println("Iniciando operação 1");
-                case 2 -> System.out.println("Iniciando operação 2");
-                case 3 -> System.out.println("Iniciando operação 3");
-                case 4 -> System.out.println("Iniciando operação 4");
-                case 5 -> System.out.println("Iniciando operação 5");
+                case 0 -> executandoPrograma = false;
+                case 1 -> colaboradores.add(Cadastros.cadastrarPadrao());
+                case 2 -> colaboradores.add(Cadastros.cadastrarColaboradorComissionado());
+                case 3 -> colaboradores.add(Cadastros.cadastrarColaboradorProducao());
+                case 4 -> Operacao.exibirFolhaCompleta(colaboradores);
+                case 5 -> Operacao.exibirFolha(colaboradores);
                 default -> System.out.println("Operação não cadastrada. Tente novamente.");
             }
         }
-
-
         System.out.println("Sistema Finalizado.");
+        Operacao.limparTerminal();
+        Menus.mostrarCreditos();
         scanner.nextInt();
 
     }
