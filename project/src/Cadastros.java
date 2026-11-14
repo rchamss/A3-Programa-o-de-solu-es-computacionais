@@ -101,7 +101,7 @@ public class Cadastros{
             try {
                 int num = Integer.parseInt(entrada);
                 if (num >= 0){
-                    return  num;
+                    return num;
                 } else{
                     System.out.println("Não são aceitos números negativos. Tente novamente.");
                     continue;

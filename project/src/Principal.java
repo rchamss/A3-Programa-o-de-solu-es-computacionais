@@ -26,8 +26,5 @@ public class Principal {
         Operacao.limparTerminal();
         Menus.mostrarCreditos();
         scanner.nextInt();
-
     }
-
-
 }
