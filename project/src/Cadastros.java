@@ -147,7 +147,6 @@ public class Cadastros{
                 continue;
             }
 
-
             try {
                 double valor = (Double.parseDouble(entrada.replace(",", ".")));
                 if (valor >= 0){
