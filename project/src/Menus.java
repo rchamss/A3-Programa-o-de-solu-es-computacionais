@@ -53,7 +53,7 @@ public class Menus {
         System.out.println(" - Rafael Ahmad Fonseca Marques Santos: 12725138443");
         System.out.println(" - Camila Maria de Sá Longa: 12725154062");
         System.out.println(" - Cauã Leão Mendes: 12725145528");
-        System.out.println(" - Tiago");
+        System.out.println(" - Tiago Eziquiel de Souza Santos Assis: 12725153056");
 
     }
 }
